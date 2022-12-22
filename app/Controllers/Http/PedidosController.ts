@@ -65,7 +65,7 @@ export default class PedidosController {
         ? valorTotal + estabCidade.custo_entrega
         : valorTotal;
 
-      valorTotal = parseFloat(valorTotal.toFixed(2));
+      valorTotal = valorTotal;
 
       if (payload.troco_para != null && payload.troco_para < valorTotal) {
         trx.rollback();
